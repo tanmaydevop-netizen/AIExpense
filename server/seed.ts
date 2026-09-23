@@ -4,15 +4,15 @@ import { prisma } from './db.js';
 async function main() {
   console.log('🌱 Starting ExpenseAI database seed...');
 
-  const email = 'tanmay.devop@gmail.com';
+ const email = 'demo@expenseai.app';
   const existing = await prisma.user.findUnique({ where: { email } });
 
   let user = existing;
   if (!user) {
-    const passwordHash = await bcrypt.hash('ExpenseAI@2026', 10);
+   const passwordHash = await bcrypt.hash('ExpenseAI@Demo2026!', 10);
     user = await prisma.user.create({
       data: {
-        name: 'Tanmay',
+       name: 'ExpenseAI Demo User',
         email,
         passwordHash,
         currency: '₹',
@@ -94,7 +94,7 @@ async function main() {
   console.log(`Created ${sampleExpenses.length} verified transactions.`);
   console.log('✅ Seed complete! You can now log in with:');
   console.log(`   Email: ${email}`);
-  console.log('   Password: ExpenseAI@2026');
+ console.log('   Password: ExpenseAI@Demo2026!');
 }
 
 main()
