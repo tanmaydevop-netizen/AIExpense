@@ -81,3 +81,7 @@ AI features include:
 │  Prisma   │  │  Gemini AI   │
 │  Database │  │     API      │
 └───────────┘  └──────────────┘
+
+This project was developed using a modern AI-augmented development approach, where AI tools were integrated into the workflow for rapid prototyping, code exploration, debugging, and iterative improvements.
+
+The development process remained guided by my own requirements and decisions, with the resulting implementation continuously reviewed, adapted, and refined to fit the project's goals.
